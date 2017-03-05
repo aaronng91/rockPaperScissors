@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<div id="prompt" *ngIf="!gameModeSelected">
+  <h1>Who would you like to play with?</h1>
+  <button class="btn btn-default player" (click)="startGameWithAnotherPlayer(true)">Another player</button>
+  <button class="btn btn-default computer" (click)="startGameWithAnotherPlayer(false)">Computer</button>
+</div>
+
+<app-two-player *ngIf="gameModeSelected && isTwoPlayers"></app-two-player>
+<app-one-player *ngIf="gameModeSelected && !isTwoPlayers"></app-one-player>

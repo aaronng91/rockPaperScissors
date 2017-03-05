@@ -1,0 +1,9 @@
+<div class="player-control">
+  <h2 class="player-name">Player {{ playerName }}</h2>
+  <button class="btn btn-default rock" (click)="chooseAction('rock')"
+          [disabled]="action" [class.btn-success]="action === 'rock'">Rock</button>
+  <button class="btn btn-default paper" (click)="chooseAction('paper')"
+          [disabled]="action" [class.btn-success]="action === 'paper'">Paper</button>
+  <button class="btn btn-default scissors" (click)="chooseAction('scissors')"
+          [disabled]="action" [class.btn-success]="action === 'scissors'">Scissors</button>
+</div>

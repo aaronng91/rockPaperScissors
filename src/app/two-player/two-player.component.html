@@ -1,0 +1,13 @@
+<div class="two-player">
+  <app-player [playerName]="1"
+              (actionSelected)="submitPlayer1Action($event)"
+              [reset]="!gameEnded"></app-player>
+  <app-player [playerName]="2"
+              (actionSelected)="submitPlayer2Action($event)"
+              [reset]="!gameEnded"></app-player>
+</div>
+
+<div class="player-won" *ngIf="gameEnded">
+  <h2 class="message">{{ gameEndMessage }}</h2>
+  <button class="btn btn-default "(click)="resetGame()">Play again</button>
+</div>

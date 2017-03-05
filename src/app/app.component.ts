@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  isTwoPlayers: boolean;
+  gameModeSelected = false;
+
+  startGameWithAnotherPlayer(choice: boolean) {
+    this.gameModeSelected = true;
+    this.isTwoPlayers = choice;
+  }
 }
